@@ -1,0 +1,244 @@
+.team {
+    padding-top: 17rem;
+    padding-bottom: 12rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 6rem;
+        padding-bottom: 8rem;
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.team__row {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.team__info {
+    width: 34rem;
+    margin-right: 5rem;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        margin: 0;
+        flex-shrink: 1;
+        display: contents;
+    }
+}
+
+.team__slider {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.team__slider-inner {
+    @include breakpointMF(small-tablet) {
+        width: auto;
+        overflow: hidden;
+        margin-right: calc((100vw - 100% - 39rem - var(--sb-width, 0)) / 2 * -1);
+        padding-right: calc((100vw - 100% - 39rem - var(--sb-width, 0)) / 2);
+        margin-left: -2rem;
+        padding-left: 2rem;
+        mask-image: linear-gradient(to right, transparent 0, white 2rem, white 100%);
+    }
+
+    .swiper {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        width: 30rem;
+        padding-right: 2rem;
+        box-sizing: content-box;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint(mobile) {
+            width: 22.6rem;
+        }
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+}
+
+.team__heading {
+    margin-bottom: 3rem;
+
+    span {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 100%;
+            right: -4rem;
+            height: 4rem;
+            margin-top: -1.5rem;
+            background-image: url('../img/splashes/1.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+
+            @include breakpoint(mobile) {
+                height: 3rem;
+                margin-top: -1rem;
+                right: -2rem;
+                left: -2rem;
+            }
+        }
+    }
+}
+
+.team__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.team__card {
+    display: flex;
+    flex-direction: column;
+    background: #272732;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+.team__card-image-container {
+    position: relative;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 65%;
+
+        @include breakpoint(mobile) {
+            padding-bottom: 90%;
+        }
+    }
+}
+
+.team__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team__card-content {
+    padding: 2rem 3rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+        padding: 1.2rem;
+        padding-top: 1.9rem;
+    }
+}
+
+.team__card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.team__card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.team__card-social {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.team__card-social-link {
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        
+    }
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.team__slider-progress {
+    margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
+}
+
+.team__btn {
+    @include breakpoint(mobile) {
+        order: 10;
+        margin-top: 3rem;
+        align-self: center;
+    }
+}

@@ -1,0 +1,243 @@
+.academy {
+    padding: 5rem 0;
+    background: #4e5199;
+    color: white;
+
+    @include breakpoint(mobile) {
+        padding-top: 6rem;
+        padding-bottom: 8rem;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.academy__row {
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.academy__content {
+    width: 44rem;
+    margin-right: 9rem;
+    flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        flex-shrink: 1;
+        width: 100%;
+        display: contents;
+    }
+}
+
+.academy__logo {
+    width: 33.6rem;
+    height: auto;
+    display: block;
+    margin-bottom: 3.4rem;
+
+    @include breakpoint(mobile) {
+        align-self: center;
+        margin-bottom: 3rem;
+        width: 29rem;
+    }
+}
+.academy__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.academy__reviews {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.academy__reviews-sliders {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    width: 86rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+        gap: 2rem;
+    }
+}
+
+.academy__reviews-slider {
+    .swiper {
+        overflow: visible;
+    }
+    @include breakpointMF(small-tablet) {
+        .swiper-wrapper {
+            grid-template-columns: minmax(0, 1fr);
+            display: grid;
+            grid-gap: 2rem;
+        }
+    }
+
+
+    @include breakpoint(mobile) {
+        .swiper-slide {
+            width: 22.6rem;
+            padding-right: 2rem;
+            box-sizing: content-box;
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.academy__reviews-card {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 3rem;
+    background: #272732;
+    border-radius: 0.8rem;
+    color: white;
+    box-sizing: border-box;
+
+    @include breakpoint(mobile) {
+        padding: 1rem;
+        padding-top: 2.8rem;
+        padding-bottom: 2.8rem;
+        display: grid;
+        grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+        grid-template-areas: 'photo name' 'text text' 'date date';
+        grid-gap: 1.2rem;
+    }
+}
+
+.academy__reviews-card-author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
+}
+
+.academy__reviews-card-author-photo-container {
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    flex-shrink: 0;
+    position: relative;
+    width: 3.6rem;
+    height: 3.6rem;
+    margin-right: 1.2rem;
+    border-radius: 50%;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        grid-area: photo;
+    }
+}
+
+.academy__reviews-card-author-photo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.academy__reviews-card-author-name {
+    width: 50%;
+    flex-grow: 1;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        grid-area: name;
+        align-self: center;
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.academy__reviews-card-date {
+    text-align: right;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-top: 0.2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 2rem;
+        grid-area: date;
+        text-align: left;
+    }
+}
+
+.academy__reviews-card-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        grid-area: text;
+        margin-top: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.academy__link {
+    .no-touch &:hover,
+    .touch &:active {
+        background-color: #fff;
+        color: #4e5199;
+    }
+
+    @include breakpoint(mobile) {
+        order: 15;
+        margin-top: 4rem;
+        align-self: center;
+    }
+}

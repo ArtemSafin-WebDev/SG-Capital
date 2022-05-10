@@ -1,0 +1,247 @@
+.strategy {
+    padding-top: 18rem;
+    padding-bottom: 22rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 4rem;
+        padding-bottom: 8rem;
+    }
+}
+
+.strategy__row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 6rem;
+    }
+}
+
+.strategy__profit {
+    display: flex;
+    align-items: flex-start;
+}
+
+.strategy__profit-arrow {
+    width: 14rem;
+    height: auto;
+    flex-shrink: 0;
+    margin-left: -4rem;
+    margin-top: -5rem;
+    z-index: -1;
+    position: relative;
+    @include breakpoint(mobile) {
+        order: 10;
+        margin: 0;
+        width: 13.4rem;
+        margin-right: -6rem;
+        position: relative;
+        left: -2rem;
+        margin-top: -2rem;
+       
+    }
+}
+
+.strategy__profit-content {
+    width: 50%;
+    flex-grow: 1;
+    padding-top: 7rem;
+    margin-left: -3rem;
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+    }
+}
+
+.strategy__profit-heading {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.6rem;
+    line-height: 4.2rem;
+    text-transform: uppercase;
+    position: relative;
+
+
+    span {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 100%;
+            right: -4rem;
+            height: 6rem;
+            margin-top: -2.5rem;
+            background-image: url('../img/splashes/1.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+
+            @include breakpoint(mobile) {
+                height: 4rem;
+                margin-top: -1.6rem;
+                right: -2rem;
+                left: -2rem;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 2.8rem;
+        line-height: 3.3rem;
+        text-transform: uppercase;
+    }
+}
+
+.strategy__profit-amount {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 8rem;
+    line-height: 9.4rem;
+    text-transform: uppercase;
+
+    span {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        text-transform: uppercase;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 6rem;
+        line-height: 7.1rem;
+        text-transform: uppercase;
+        span {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+        }
+    }
+}
+
+.strategy__profit-amount-desc {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 2.8rem;
+    line-height: 3.3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        text-transform: uppercase;
+    }
+}
+
+.strategy__profit-amount-remark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+
+        @include breakpoint(mobile) {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+}
+
+.strategy__heading {
+    margin-bottom: 3rem;
+
+
+    span {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -3rem;
+            top: 100%;
+            right: -4rem;
+            height: 4rem;
+            margin-top: -1.8rem;
+            background-image: url('../img/splashes/1.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+            transform: scaleY(-1);
+
+            @include breakpoint(mobile) {
+                height: 4rem;
+                margin-top: -1rem;
+                right: -2rem;
+                left: -2rem;
+                height: 3rem;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.strategy__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    margin-bottom: 5rem;
+    max-width: 50rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        max-width: none;
+        margin-bottom: 3rem;
+    }
+}
+
+
+.strategy__link {
+    align-self: flex-start;
+    @include breakpoint(mobile) {
+        align-self: center;
+    }
+}
+
+.strategy__info {
+    display: flex;
+    flex-direction: column;
+}

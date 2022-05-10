@@ -1,0 +1,123 @@
+.page-footer {
+    padding: 5rem 0;
+    background-color: var(--light-bg);
+    color: white;
+
+    @include breakpoint(mobile) {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+
+.page-footer__top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 7rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 5rem;
+    }
+}
+
+.page-footer__social-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.page-footer__social-link {
+    width: 2.4rem;
+    height: 2.4rem;
+    display: block;
+
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: rgba(white, 0.75);
+    }
+}
+
+.page-footer__logo-image {
+    width: 18.6rem;
+    display: block;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        width: 16.8rem;
+    }
+}
+
+.page-footer__info {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #8e8e8e;
+    margin-bottom: 4.5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.2rem;
+        margin-bottom: 3rem;
+    }
+
+    p {
+        margin-bottom: 1.7rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1.5rem;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.page-footer__links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include breakpoint(mobile) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+.page-footer__link {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    border-right: 1px solid #5e5e75;
+    padding: 1.5rem 4rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        text-align: center;
+        padding: 1rem 3rem;
+    }
+    &:last-child {
+        border: none;
+    }
+}

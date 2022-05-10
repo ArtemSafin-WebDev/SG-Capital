@@ -1,0 +1,258 @@
+.projects {
+    background-color: var(--light-bg);
+    padding-top: 15rem;
+    padding-bottom: 17rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 6rem;
+        padding-bottom: 8rem;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.projects__row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 3rem;
+    }
+}
+
+.projects__heading {
+    width: 41rem;
+    margin-right: 3rem;
+    margin-top: -1rem;
+
+    span {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 100%;
+            right: -2rem;
+            height: 3rem;
+            margin-top: -1rem;
+            background-image: url('../img/splashes/2.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+            transform: scaleX(-1) scaleY(-1);
+
+            @include breakpoint(mobile) {
+                height: 2rem;
+                margin-top: -.5rem;
+                right: -2rem;
+                left: -2rem;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 3rem;
+
+    
+    }
+}
+
+.projects__text {
+    width: 50%;
+    flex-grow: 1;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+}
+
+.projects__slider {
+}
+
+.projects__slider-inner {
+    @include breakpointMF(small-tablet) {
+        .swiper {
+            overflow: visible;
+        }
+
+        .swiper-slide {
+            width: 41rem;
+            box-sizing: content-box;
+            padding-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        .swiper {
+            overflow: visible;
+        }
+
+        .swiper-wrapper {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr);
+            grid-gap: 2rem;
+        }
+
+        .container:not(.all-shown) & {
+            .swiper-slide {
+                &:not(:nth-child(-n+3)) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.projects__slider-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    background: #1b1b20;
+    border-radius: 0.8rem;
+    color: white;
+
+    @include breakpoint(mobile) {
+        padding: 2rem 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+.projects__slider-card-logo {
+    background: #272732;
+    border-radius: 0.8rem;
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+        margin-right: 2.4rem;
+    }
+}
+
+.projects__slider-card-logo-image {
+    width: 6rem;
+    height: auto;
+}
+
+.projects__slider-card-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 10rem);
+    grid-gap: 2rem;
+    align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        width: 50%;
+        flex-grow: 1;
+        grid-template-columns: minmax(0, 1fr) minmax(0, auto);
+    }
+}
+
+.projects__slider-card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.projects__slider-card-token {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+}
+
+.projects__slider-card-date {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    margin-bottom: 0.2rem;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        text-align: right;
+    }
+}
+
+.projects__slider-card-result-amount {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.6rem;
+    line-height: 1.2;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 800;
+        font-size: 2.8rem;
+        line-height: 1.2;
+        text-align: right;
+    }
+}
+
+.projects__slider-progress {
+    margin-top: 4rem;
+    background: #1b1b20;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.projects__show-more {
+    margin-top: 2rem;
+}

@@ -1,0 +1,98 @@
+.mission {
+    padding-top: 11.7rem;
+    padding-bottom: 15.2rem;
+    background-color: var(--light-bg);
+
+    @include breakpoint(mobile) {
+        padding-top: 5rem;
+        padding-bottom: 8rem;
+    }
+}
+
+.mission__heading {
+    margin-bottom: -1.5rem;
+
+    span {
+        position: relative;
+        display: inline-block;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 100%;
+            right: -2rem;
+            height: 3rem;
+            margin-top: -1rem;
+            background-image: url('../img/splashes/2.jpg');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            z-index: -1;
+            // transform: scaleX(-1) scaleY(-1);
+
+            @include breakpoint(mobile) {
+                height: 1.5rem;
+                margin-top: -.4rem;
+                right: -1rem;
+                left: -1rem;
+            }
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+    }
+}
+
+.mission__content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 85.6rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        max-width: none;
+    }
+}
+
+.mission__top-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.5rem;
+    }
+    &::after {
+        content: '';
+        width: 8.7rem;
+        height: 6rem;
+        flex-shrink: 0;
+        background-image: url('../img/quotes.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include breakpoint(mobile) {
+            width: 5.7rem;
+            height: 4rem;
+        }
+    }
+}
+
+.mission__text {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    font-family: var(--raleway);
+
+    @include breakpoint(mobile) {
+        font-style: italic;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+}

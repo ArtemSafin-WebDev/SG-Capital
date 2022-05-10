@@ -1,0 +1,82 @@
+.btn {
+    min-width: 25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.8rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    padding: 1rem 1.8rem;
+    height: 6rem;
+    white-space: nowrap;
+    border-radius: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+    transition: color .2s, background-color .2s;
+
+    @include breakpoint(mobile) {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        height: 4rem;
+        border-radius: .6rem;
+        width: 22rem;
+        max-width: 100%;
+        min-width: auto;
+        flex-shrink: 1;
+        padding: 0.6rem;
+    }
+
+    svg {
+        flex-shrink: 0;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .no-touch &:not(.btn--white):hover,
+    .touch &:not(.btn--white):active {
+        background-color: var(--primary-color-hover);
+    }
+
+    .icon-button-arrow-right {
+        width: 2.6rem;
+        height: 2.6rem;
+        fill: currentColor;
+
+        @include breakpoint(mobile) {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+    }
+
+    .icon-graph {
+        width: 2.6rem;
+        height: 2.6rem;
+
+        @include breakpoint(mobile) {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+    }
+
+    &--white {
+        background-color: #fff;
+        color: var(--text-color);
+        &:link,
+        &:visited {
+            color: var(--text-color);
+        }
+    }
+
+    .no-touch &--white:hover,
+    .touch &--white:active {
+        background: var(--primary-color);
+        color: white;
+    }
+}
