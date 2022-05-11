@@ -13,7 +13,7 @@ export default function moveUpBlocks() {
                 const tl = gsap.timeline({
                     scrollTrigger: {
                         trigger: element,
-                        start: 'top bottom-=20%',
+                        start: 'top bottom-=15%',
                         scrub: false,
                         end: 'bottom top',
                         markers: false
