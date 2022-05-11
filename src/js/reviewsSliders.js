@@ -1,6 +1,6 @@
-import { Swiper, EffectCreative, Pagination } from 'swiper';
+import { Swiper, EffectCreative, Pagination, Autoplay, Mousewheel } from 'swiper';
 
-Swiper.use([EffectCreative, Pagination]);
+Swiper.use([EffectCreative, Pagination, Autoplay, Mousewheel]);
 import { IS_MOBILE } from './utils';
 
 export default function reviewsSliders() {
@@ -14,7 +14,13 @@ export default function reviewsSliders() {
             slidesPerView: 'auto',
             speed: 400,
             centeredSlides: true,
-            centeredSlidesBounds: true
+            centeredSlidesBounds: true,
+            autoplay: {
+                delay: 2000
+            },
+            mousewheel: {
+                releaseOnEdges: true
+            }
         });
 
         if (slider.slides.length >= 3) {

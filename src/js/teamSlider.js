@@ -1,6 +1,6 @@
-import { Swiper, EffectCreative, Pagination } from 'swiper';
+import { Swiper, EffectCreative, Pagination, Autoplay, Mousewheel } from 'swiper';
 
-Swiper.use([EffectCreative, Pagination]);
+Swiper.use([EffectCreative, Pagination, Autoplay, Mousewheel]);
 
 export default function teamSlider() {
     const elements = Array.from(document.querySelectorAll('.js-team-slider'));
@@ -15,6 +15,12 @@ export default function teamSlider() {
                 el: element.querySelector('.slider-progress'),
                 type: 'progressbar'
             },
+            autoplay: {
+                delay: 2000
+            },
+            mousewheel: {
+                releaseOnEdges: true
+            }
             // effect: 'creative',
             // creativeEffect: {
             //     prev: {

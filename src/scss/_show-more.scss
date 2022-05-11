@@ -19,6 +19,10 @@
         color: white;
     }
 
+    .all-shown & {
+        display: none;
+    }
+
     @include breakpointMF(small-tablet) {
         display: none;
     }

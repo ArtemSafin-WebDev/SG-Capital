@@ -1,6 +1,6 @@
-import { Swiper, EffectCreative, Pagination } from 'swiper';
+import { Swiper, EffectCreative, Pagination, Autoplay, Mousewheel } from 'swiper';
 
-Swiper.use([EffectCreative, Pagination]);
+Swiper.use([EffectCreative, Pagination, Autoplay, Mousewheel]);
 
 export default function blogSlider() {
     const elements = Array.from(document.querySelectorAll('.js-blog-slider'));
@@ -15,19 +15,12 @@ export default function blogSlider() {
                 el: element.querySelector('.slider-progress'),
                 type: 'progressbar'
             },
-            // effect: 'creative',
-            // creativeEffect: {
-            //     prev: {
-            //         scale: 0,
-            //         opacity: 0
-            //     },
-            //     limitProgress: 6,
-            //     next: {
-            //         opacity: 1,
-
-            //         translate: ['100%', 0, 0]
-            //     }
-            // }
+            autoplay: {
+                delay: 2000
+            },
+            mousewheel: {
+                releaseOnEdges: true
+            }
         });
     });
 }

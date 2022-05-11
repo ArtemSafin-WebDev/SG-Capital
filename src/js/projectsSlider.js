@@ -1,6 +1,6 @@
-import { Swiper, EffectCreative, Pagination } from 'swiper';
+import { Swiper, EffectCreative, Pagination, Autoplay, Mousewheel } from 'swiper';
 
-Swiper.use([EffectCreative, Pagination]);
+Swiper.use([EffectCreative, Pagination, Autoplay, Mousewheel]);
 import { IS_MOBILE } from './utils';
 
 export default function projectsSlider() {
@@ -16,6 +16,12 @@ export default function projectsSlider() {
             pagination: {
                 el: element.querySelector('.slider-progress'),
                 type: 'progressbar'
+            },
+            autoplay: {
+                delay: 2000
+            },
+            mousewheel: {
+                releaseOnEdges: true
             }
         });
     });

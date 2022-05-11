@@ -16,6 +16,7 @@ import blogSlider from './blogSlider';
 import mediaPlayer from './mediaPlayer';
 import projectsSlider from './projectsSlider';
 import reviewsSliders from './reviewsSliders';
+import showAll from './showAll';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
     mediaPlayer();
     projectsSlider();
     reviewsSliders();
+    showAll();
 });
 
 document.addEventListener('lazyloaded', () => {
