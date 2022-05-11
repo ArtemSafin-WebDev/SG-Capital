@@ -47,6 +47,12 @@
  */
 
 /*!
+ * imagesLoaded v4.1.4
+ * JavaScript is all like "You images are done yet or what?"
+ * MIT License
+ */
+
+/*!
 * Parsley.js
 * Version 2.9.2 - built Tue, Dec 10th 2019, 6:18 pm
 * http://parsleyjs.org
