@@ -20,12 +20,16 @@ import showAll from './showAll';
 import linkCopy from './linkCopy';
 import moveUpBlocks from './moveUpBlocks';
 import imagesLoaded from 'imagesloaded';
+import fixedHeader from './fixedHeader';
+import numbersPeopleSlider from './numbersPeopleSlider';
+import clientHeight from './clientHeight';
 
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
     detectTouch();
     setScrollbarWidth();
+    clientHeight();
     masks();
     validation();
     anchorLinks();
@@ -42,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
     showAll();
     linkCopy();
     moveUpBlocks();
+    fixedHeader();
+    numbersPeopleSlider();
 
     let imgLoad = imagesLoaded(document.querySelector('.page-content'));
     function onAlways() {

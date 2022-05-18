@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preload" href="https://www.xdao.app/137/dao/0xf4b1b7e8ab72b72c3791f6ef081afb7140359191/widgets/daopage" as="document">
     <title>
         {{ title }}
     </title>
@@ -28,7 +29,9 @@
 
             {{/block}}
         </main>
+
         {{> footer }}
+        {{> modals }}
         {{> ie-placeholder }}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="js/app.js"></script>

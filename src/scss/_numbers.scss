@@ -65,10 +65,10 @@
 }
 
 .numbers__people {
-    display: flex;
-    align-items: center;
+   
     margin-right: 1rem;
     flex-shrink: 0;
+    width: 11rem;
 
     @include breakpoint(mobile) {
         position: absolute;
@@ -78,12 +78,17 @@
     }
 }
 
+.numbers__people-items {
+    display: flex;
+    align-items: center;
+}
+
 .numbers__people-item {
     position: relative;
     width: 5.2rem;
     height: 5.2rem;
     border-radius: 50%;
-    border: 0.3rem solid var(--light-bg);
+    border: 3px solid var(--light-bg);
     flex-shrink: 0;
     overflow: hidden;
 
@@ -94,7 +99,7 @@
     @include breakpoint(mobile) {
         width: 4.8rem;
         height: 4.8rem;
-        border: 0.2rem solid var(--light-bg);
+        border: 2px solid var(--light-bg);
 
         &:not(:first-child) {
             margin-left: -2.4rem;

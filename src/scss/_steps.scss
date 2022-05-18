@@ -179,6 +179,8 @@
     --plyr-color-main: #4e5199;
     border-radius: .8rem;
     overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     @include breakpoint(mobile) {
         width: 100%;
         flex-grow: 0;

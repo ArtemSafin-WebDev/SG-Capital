@@ -1,0 +1,118 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    // padding: var(--content-padding);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s;
+    background-color: #0D0D15;
+    z-index: 300;
+    // transform: translateY(-100%);
+
+    -webkit-overflow-scrolling: touch;
+
+    @include noScrollbar();
+    &:not(.active) {
+        right: calc(-1 * var(--sb-width, 0));
+    }
+
+
+    @include breakpoint(mobile) {
+        
+    }
+  
+
+    &.active {
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s, transform 0.4s;
+        transform: translateY(0);
+    }
+}
+
+.modal__inner {
+    margin: auto;
+    width: 100%;
+    position: relative;
+}
+
+.modal__iframe-wrapper {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+
+    @include breakpoint(mobile) {
+        padding-top: 6rem;
+        height: var(--client-height, 100vh);
+        
+    }
+    &::before {
+        content: 'Загрузка...';
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 1.2;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+        left: 50%;
+        top: 50%;
+
+        @include breakpoint(mobile) {
+            font-size: 2rem;
+        }
+    }
+    iframe {
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        
+
+        @include noScrollbar();
+
+        &.iframe-loaded {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity .4s, visibility .4s;
+        }
+    }
+}
+.modal__close {
+    position: absolute;
+    right: 7rem;
+    top: 3rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 50;
+
+    @include breakpoint(mobile) {
+        width: 2.5rem;
+        height: 2.5rem;
+        right: 2rem;
+        top: 1.7rem;
+    }
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: block;
+        fill: white;
+        transition: fill .2s;
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        svg {
+            fill: rgba(white, .7);
+        }
+    }
+}
