@@ -142,7 +142,7 @@
     color: white;
     overflow: hidden;
     min-height: 42rem;
-
+    flex-grow: 1;
     @include breakpoint(mobile) {
         min-height: 33rem;
     }

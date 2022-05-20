@@ -134,7 +134,7 @@
     background: #1b1b20;
     border-radius: 0.8rem;
     color: white;
-
+    flex-grow: 1;
     @include breakpoint(mobile) {
         padding: 2rem 1rem;
         display: flex;

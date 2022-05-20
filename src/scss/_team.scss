@@ -130,6 +130,7 @@
     overflow: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
+    flex-grow: 1;
 }
 
 .team__card-image-container {
