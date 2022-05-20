@@ -1,6 +1,6 @@
-import { Swiper, EffectCreative, Pagination, Autoplay, Mousewheel } from 'swiper';
+import { Swiper, EffectCreative, Pagination, Autoplay, Scrollbar } from 'swiper';
 
-Swiper.use([EffectCreative, Pagination, Autoplay, Mousewheel]);
+Swiper.use([EffectCreative, Pagination, Autoplay, , Scrollbar]);
 
 export default function blogSlider() {
     const elements = Array.from(document.querySelectorAll('.js-blog-slider'));
@@ -11,15 +11,12 @@ export default function blogSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             speed: 600,
-            pagination: {
-                el: element.querySelector('.slider-progress'),
-                type: 'progressbar'
-            },
             autoplay: {
                 delay: 2000
             },
-            mousewheel: {
-                releaseOnEdges: true
+            scrollbar: {
+                el: element.querySelector('.slider-progress'),
+                draggable: true
             }
         });
     });

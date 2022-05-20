@@ -10,7 +10,7 @@
     --max-container-width: 124rem;
     --content-padding: 6rem;
     --primary-color: #4E5199;
-    --primary-color-hover: #36388b;
+    --primary-color-hover: rgb(64, 65, 130);
     --text-color: #1B1B20;
     --tt-norms: 'TT Norms', sans-serif;
     --dark-bg: #1B1B20;
@@ -205,8 +205,8 @@ th {
 
 ::selection {
     color: white;
-    background-color: var(--primary-color);
-    -webkit-text-fill-color: white;
+    background-color: #4E5199;
+    // -webkit-text-fill-color: white;
 }
 
 input:-webkit-autofill,

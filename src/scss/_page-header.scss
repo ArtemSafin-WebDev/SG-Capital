@@ -5,7 +5,7 @@
     width: 100%;
     height: auto;
     z-index: 70;
-
+    background-color: var(--dark-bg);
     transition: color 0.2s;
 
     &::before {
@@ -236,7 +236,7 @@
     padding: 0.5rem;
     border-radius: 0.5rem;
     transition: background-color 0.2s;
-
+    background-color: var(--dark-bg);
     .mobile-menu-open &,
     .fixed-header & {
         background-color: #fff;

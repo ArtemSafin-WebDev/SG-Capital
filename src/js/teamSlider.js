@@ -1,6 +1,6 @@
-import { Swiper, EffectCreative, Pagination, Autoplay, Mousewheel } from 'swiper';
+import { Swiper, EffectCreative, Pagination, Autoplay, Scrollbar } from 'swiper';
 
-Swiper.use([EffectCreative, Pagination, Autoplay, Mousewheel]);
+Swiper.use([EffectCreative, Pagination, Autoplay, , Scrollbar]);
 
 export default function teamSlider() {
     const elements = Array.from(document.querySelectorAll('.js-team-slider'));
@@ -11,29 +11,14 @@ export default function teamSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             speed: 600,
-            pagination: {
+            scrollbar: {
                 el: element.querySelector('.slider-progress'),
-                type: 'progressbar'
+                draggable: true
             },
             autoplay: {
                 delay: 2000
             },
-            mousewheel: {
-                releaseOnEdges: true
-            }
-            // effect: 'creative',
-            // creativeEffect: {
-            //     prev: {
-            //         scale: 0,
-            //         opacity: 0
-            //     },
-            //     limitProgress: 6,
-            //     next: {
-            //         opacity: 1,
-
-            //         translate: ['100%', 0, 0]
-            //     }
-            // }
+          
         });
     });
 }

@@ -1,6 +1,7 @@
-import { Swiper, EffectCreative, Pagination, Autoplay, Mousewheel } from 'swiper';
+import { Swiper, EffectCreative, Pagination, Autoplay, Scrollbar } from 'swiper';
 
-Swiper.use([EffectCreative, Pagination, Autoplay, Mousewheel]);
+Swiper.use([EffectCreative, Pagination, Autoplay, , Scrollbar]);
+
 import { IS_MOBILE } from './utils';
 
 export default function projectsSlider() {
@@ -13,16 +14,14 @@ export default function projectsSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             speed: 600,
-            pagination: {
+            scrollbar: {
                 el: element.querySelector('.slider-progress'),
-                type: 'progressbar'
+                draggable: true
             },
             autoplay: {
                 delay: 2000
             },
-            mousewheel: {
-                releaseOnEdges: true
-            }
+         
         });
     });
 }

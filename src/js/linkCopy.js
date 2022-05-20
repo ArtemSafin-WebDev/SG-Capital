@@ -17,7 +17,7 @@ export default function linkCopy() {
         element.addEventListener('click', event => {
             event.preventDefault();
 
-            copyToClipboard(element.href);
+            copyToClipboard(element.getAttribute('data-copy-text'));
 
             if (window.showMessage) {
                 window.showMessage('#link-copied');

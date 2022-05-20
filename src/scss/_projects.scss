@@ -172,7 +172,7 @@
 
 .projects__slider-card-row {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 10rem);
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-gap: 2rem;
     align-items: flex-start;
 
@@ -219,6 +219,7 @@
     font-size: 1.8rem;
     line-height: 2.1rem;
     margin-bottom: 0.2rem;
+    white-space: nowrap;
 
     @include breakpoint(mobile) {
         font-style: normal;

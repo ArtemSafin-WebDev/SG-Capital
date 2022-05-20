@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
     showAll();
     linkCopy();
     moveUpBlocks();
-    fixedHeader();
+    // fixedHeader();
     numbersPeopleSlider();
 
     let imgLoad = imagesLoaded(document.querySelector('.page-content'));
