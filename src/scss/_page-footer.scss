@@ -95,10 +95,11 @@
     row-gap: 1rem;
 
     @include breakpoint(mobile) {
-        // display: grid;
-        // grid-template-columns: repeat(2, minmax(0, 1fr));
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         // align-items: center;
         // justify-content: flex-start;
+        grid-row-gap: 1rem;
     }
 }
 
@@ -110,6 +111,12 @@
     border-right: 1px solid #5e5e75;
     padding: 1.5rem 4rem;
 
+    @include breakpointMF(small-tablet) {
+        &:last-child {
+            border: none;
+        }
+    }
+
     @include breakpoint(mobile) {
         font-style: normal;
         font-weight: 700;
@@ -117,15 +124,12 @@
         line-height: 1.4rem;
         text-align: center;
         padding: 1rem 3rem;
-        width: max-content;
-        max-width: 50%;
+      
         border: none;
 
-        &:nth-child(odd):not(:last-child) {
+        &:nth-child(odd) {
             border-right: 1px solid #5e5e75;
         }
     }
-    &:last-child {
-        border: none;
-    }
+  
 }

@@ -15,9 +15,9 @@ export default function numbersPeopleSlider() {
             fadeEffect: {
                 crossFade: true
             },
-            // autoplay: {
-            //     delay: 1800
-            // }
+            autoplay: {
+                delay: 1800
+            }
         });
     });
 }

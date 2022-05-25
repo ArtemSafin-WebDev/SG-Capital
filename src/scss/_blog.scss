@@ -94,15 +94,15 @@
             top: 100%;
             right: -2rem;
             height: 5rem;
-            margin-top: -2rem;
-            background-image: url('../img/splashes/1.jpg');
+            margin-top: -2.5rem;
+            background-image: url('../img/splashes/3.webp');
             background-size: 100% 100%;
             background-repeat: no-repeat;
             z-index: -1;
 
             @include breakpoint(mobile) {
-                height: 2rem;
-                margin-top: -.8rem;
+                height: 3.5rem;
+                margin-top: -1.5rem;
                 right: -1rem;
                 left: -1rem;
             }
