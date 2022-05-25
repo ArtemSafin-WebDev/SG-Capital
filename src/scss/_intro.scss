@@ -40,10 +40,10 @@
 .intro__heading {
     margin-bottom: 3rem;
 
-    span {
+    span, b {
         position: relative;
         display: inline-block;
-
+        font-weight: inherit;
         &::before {
             content: '';
             position: absolute;

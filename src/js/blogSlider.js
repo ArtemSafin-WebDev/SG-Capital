@@ -11,9 +11,9 @@ export default function blogSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             speed: 600,
-            autoplay: {
-                delay: 2000
-            },
+            // autoplay: {
+            //     delay: 2000
+            // },
             scrollbar: {
                 el: element.querySelector('.slider-progress'),
                 draggable: true

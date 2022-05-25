@@ -15,9 +15,9 @@ export default function reviewsSliders() {
             speed: 400,
             centeredSlides: true,
             centeredSlidesBounds: true,
-            autoplay: {
-                delay: 2000
-            },
+            // autoplay: {
+            //     delay: 2000
+            // },
             mousewheel: {
                 releaseOnEdges: true
             }

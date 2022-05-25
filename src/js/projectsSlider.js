@@ -18,9 +18,9 @@ export default function projectsSlider() {
                 el: element.querySelector('.slider-progress'),
                 draggable: true
             },
-            autoplay: {
-                delay: 2000
-            },
+            // autoplay: {
+            //     delay: 2000
+            // },
          
         });
     });

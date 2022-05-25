@@ -12,10 +12,10 @@
 .mission__heading {
     margin-bottom: -1.5rem;
 
-    span {
+    span, b {
         position: relative;
         display: inline-block;
-
+        font-weight: inherit;
         &::before {
             content: '';
             position: absolute;
@@ -94,5 +94,6 @@
         font-weight: 500;
         font-size: 1.6rem;
         line-height: 1.9rem;
+        font-family: var(--tt-norms);
     }
 }

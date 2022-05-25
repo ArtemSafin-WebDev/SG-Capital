@@ -12,10 +12,10 @@
 .about__heading {
     margin-bottom: 2rem;
 
-    span {
+    span, b {
         position: relative;
         display: inline-block;
-
+        font-weight: inherit;
         &::before {
             content: '';
             position: absolute;
