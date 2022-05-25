@@ -34,7 +34,7 @@
     span, b, strong {
         position: relative;
         display: inline-block;
-
+        font-weight: inherit;
         &::before {
             content: '';
             position: absolute;
