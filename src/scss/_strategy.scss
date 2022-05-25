@@ -106,7 +106,7 @@
     line-height: 9.4rem;
     text-transform: uppercase;
 
-    span {
+    span, b, strong {
         font-style: normal;
         font-weight: 800;
         font-size: 1.8rem;
@@ -178,7 +178,7 @@
     margin-bottom: 3rem;
 
 
-    span {
+    span, b, strong {
         position: relative;
         display: inline-block;
 
