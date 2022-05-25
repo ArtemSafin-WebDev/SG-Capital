@@ -120,7 +120,7 @@
         font-size: 6rem;
         line-height: 7.1rem;
         text-transform: uppercase;
-        span {
+        span, b, strong {
             font-style: normal;
             font-weight: 800;
             font-size: 1.6rem;
@@ -181,7 +181,7 @@
     span, b, strong {
         position: relative;
         display: inline-block;
-
+        font-weight: inherit;
         &::before {
             content: '';
             position: absolute;
