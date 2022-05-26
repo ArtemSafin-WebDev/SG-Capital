@@ -19,9 +19,7 @@
         z-index: 1;
         background-color: #26252C;
 
-        @include breakpointMF(small-tablet) {
-            display: none;
-        }
+        
     }
 
     .modal-open &,
